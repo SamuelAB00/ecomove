@@ -1,0 +1,361 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+}
+
+/* Sidebar / Coluna Esquerda */
+.sidebar {
+    width: 280px;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+.avatar-placeholder {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: #0b698b;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid #ffffff;
+}
+
+.avatar-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.stats p {
+    font-size: 13px;
+    margin: 6px 0;
+    color: #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-atividade {
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.2s;
+}
+
+.btn-atividade:hover:not(:disabled) {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.btn-atividade:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.sidebar-footer {
+    text-align: center;
+    border-top: 1px solid #444444;
+    padding-top: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #aaaaaa;
+}
+
+.social-icons i:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.copyright {
+    font-size: 11px;
+    color: #777777;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    flex: 1;
+    padding: 20px 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-login {
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #333333;
+    padding: 8px 24px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Filtros */
+.filters {
+    background-color: #333333;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px 0 30px 0;
+    border-radius: 4px;
+}
+
+.filters button {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+}
+
+.filters button:hover {
+    opacity: 1;
+}
+
+/* Feed */
+.card-atividade {
+    background: #ffffff;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar-feed {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.card-info h4 {
+    font-size: 15px;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.card-info p {
+    font-size: 13px;
+    color: #555555;
+    margin: 2px 0;
+}
+
+.card-info small {
+    color: #888888;
+    font-size: 11px;
+}
+
+.like-btn {
+    color: #aaaaaa;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    user-select: none;
+}
+
+.like-btn.active {
+    color: #e74c3c;
+}
+
+/* Modal e Formulários */
+.form-container {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.page-btn {
+    padding: 6px 14px;
+    border: 1px solid #ccc;
+    background: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.page-btn.active {
+    background-color: #483dad;
+    color: #ffffff;
+    border-color: #483dad;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 20px;
+    width: 340px;
+    border-radius: 4px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.btn-close {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toggle-auth {
+    margin: 10px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+.toggle-auth a {
+    color: #483dad;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-cancel {
+    background: transparent;
+    border: 1px solid #333333;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.btn-confirm {
+    background: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.input-error {
+    border: 1px solid #ff0000 !important;
+}
+
+.error-message {
+    color: #ff0000;
+    font-size: 11px;
+    display: block;
+    margin-top: 2px;
+}
+
+.hidden {
+    display: none !important;
+}
